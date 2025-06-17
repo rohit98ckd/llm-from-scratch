@@ -1,0 +1,22 @@
+model:
+  vocab_size: 50257
+  n_layers: 8
+  n_heads: 12
+  d_model: 768
+  d_ff: 3072
+  max_seq_len: 256
+  dropout: 0.1
+
+training:
+  batch_size: 16
+  learning_rate: 2e-4
+  epochs: 15
+  warmup_steps: 1000
+  weight_decay: 0.01
+  grad_clip: 1.0
+  checkpoint_dir: "./checkpoints_medium"
+  log_interval: 200
+
+data:
+  dataset_path: "./data/tinyshakespeare.txt"
+  tokenizer: "custom"
